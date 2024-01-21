@@ -18,7 +18,7 @@ app.use('/flightsService', createProxyMiddleware({ target: ServerConfig.FLIGHT_S
 app.use('/bookingService', createProxyMiddleware({ target: ServerConfig.BOOKING_SERVICE, changeOrigin: true }));
 
 
-app.listen(ServerConfig.PORT, () => {
+app.listen(ServerConfig.PORT, async () => {
     console.log(`Successfully started the server on PORT : ${ServerConfig.PORT}`);
 });
 
