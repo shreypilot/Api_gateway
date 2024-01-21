@@ -40,6 +40,7 @@ async function signin(data) {
     }
 }
 
+
 async function isAuthenticated(token) {
     try {
         if(!token) {
@@ -61,12 +62,9 @@ async function isAuthenticated(token) {
         }
         console.log(error);
         throw new AppError('Something went wrong', StatusCodes.INTERNAL_SERVER_ERROR);
-    
     }
- 
+
 }
-
-
 
 module.exports = {
     create,
